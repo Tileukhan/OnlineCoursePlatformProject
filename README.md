@@ -3,7 +3,7 @@
 <br>**Team members:** Erzen Arman, Tileukhan Seifulla
 
 **Project Description**
-The Online Course Platform is a Java-based application which objective is to efficiently provide the courses for students including such functions as purchasing courses like Calculus, Web Development and Python, convenient payment system and choice to format of the course. This programm is aiming also for teachers as well, since they can add students and send them some messages, in our case 'Welcome!'. All in all, teahcers, studeant and their parents are able to download Course description in txt and html format. While doing this project we tried to do it mre convenient for every user whether it's student, parent or teacher.
+The Online Course Platform is a Java-based application which objective is to efficiently provide the courses for students including such functions as purchasing courses like Calculus, Web Development and Python, convenient payment system and choice to format of the course. This programm is aiming also for teachers as well, since they can add students and send them some messages, in our case 'Welcome!'. All in all, teachers, students and their parents are able to download Course description in txt and html format. While doing this project we tried to do it more convenient for every user whether it's student, parent or teacher.
 <br>**Design Patterns**
 <br>The project incorporates several design patterns to enhance its functionality and maintainability:
 <br>**Singleton Pattern**
