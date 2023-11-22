@@ -1,24 +1,52 @@
-<br>**Name of the project:** Online Course Platform
-<br>**Group:** SE-2210
-<br>**Team members:** Erzen Arman, Tileukhan Seifulla
+# Online Course Platform
 
-**Project Description**
-The Online Course Platform is a Java-based application which objective is to efficiently provide the courses for students including such functions as purchasing courses like Calculus, Web Development and Python, convenient payment system and choice to format of the course. This programm is aiming also for teachers as well, since they can add students and send them some messages, in our case 'Welcome!'. All in all, teachers, students and their parents are able to download Course description in txt and html format. While doing this project we tried to do it more convenient for every user whether it's student, parent or teacher.
-<br>**Design Patterns**
-<br>The project incorporates several design patterns to enhance its functionality and maintainability:
-<br>**Singleton Pattern**
-<br>In our project, the Singleton pattern is applied to the UserManager class, ensuring a singular instance for centralized user management. This design choice establishes a global point for user-related operations, promoting efficiency by preventing unnecessary object instantiation. The UserManager functions as a central hub for managing users and seamlessly coordinates with observers, facilitating event notification within the online course platform. This implementation enhances resource efficiency and maintains a unified approach to user management throughout the application.
-<br>**Strategy Pattern**
-<br>In the project, the Strategy pattern is applied to handle payment methods. This design involves an interface, PaymentStrategy, defining a common method for payments, and a PaymentContext class managing the payment strategy dynamically. Concrete implementations, such as KaspiPayStrategy, HalykPayStrategy, and QiwiPayStrategy, encapsulate specific payment behaviors. The main application (Main class) utilizes this pattern to allow users to select and execute different payment strategies during the course enrollment process. The Strategy pattern enhances flexibility by accommodating new payment methods without modifying existing code, promoting a separation of concerns by encapsulating payment behaviors, and providing a framework for adaptability to varying payment requirements within the application.
-<br>**Adapter**
-<br>In the project, the Adapter pattern is employed to bridge the interface mismatch between two classes, DownloadMaterial and HTMLSaver. The DownloadMaterialToHtmlAdapter class acts as an intermediary, adapting the HTMLSaver interface to the DownloadMaterial interface. This allows the HTMLDownloader, originally designed to save HTML content, to seamlessly implement the DownloadMaterial interface, enabling it to be used in the context of downloading and saving course materials in text format. The adapter encapsulates the necessary conversion logic, facilitating the integration of the HTMLDownloader into the broader structure of the online course platform application. This implementation ensures compatibility and reusability of existing code, demonstrating the Adapter pattern's utility in managing disparate interfaces within the project.
-<br>**Decorator**
-<br>In the project, the Decorator pattern is utilized to extend the behavior of the Course interface without altering its structure. The CourseDecorator acts as the base decorator class, while specific decorators such as TextCourseDecorator and VideoCourseDecorator extend this base class to provide additional functionality. These decorators enhance the original enroll method by appending messages indicating the chosen course format. In the main application (Main class), users can dynamically choose different course formats, such as text or video, during the enrollment process. This implementation aligns with the Decorator pattern, allowing for a flexible and modular approach to enhancing course functionalities without modifying the existing course classes. It promotes code extensibility and scalability by enabling the incorporation of new decorator classes in the future, providing a versatile solution for handling various course formats within the online course platform.
-<br>**Factory Pattern**
-<br>In the implemented project, the Factory pattern is employed to facilitate the dynamic creation of different courses within the Online Course Platform. The Course interface defines the common enroll method that is implemented by concrete courses. The abstract class CourseFactory acts as the base for specific course factories, such as CalculusCourseFactory, PythonCourseFactory, and WebDevelopmentCourseFactory, each responsible for creating an instance of the respective course.
-<br>During the execution of the program, users are prompted to choose a course from the available options, and the corresponding factory is employed to create an instance of the chosen course. This adheres to the Factory pattern, promoting the separation of object creation from the rest of the application logic. The Main class orchestrates the overall flow of the program, interacting with user inputs, authentication, and the creation of courses and associated functionalities. This modular and extensible design allows for the addition of new courses and their corresponding factories in a straightforward manner, ensuring the scalability and flexibility of the Online Course Platform.
-<br>**Observer Pattern**
-<br>In the implemented project, the Observer pattern is utilized to enable communication between the Online Course Platform and its enrolled students. The CourseObserver interface defines the update method, which is implemented by the Student class. The CourseSubject interface declares methods for adding, removing, and notifying observers.
-<br>During program execution, students are added as observers to the userManager, serving as the subject in this context. When an event, such as a welcome message, occurs, the userManager notifies all registered observers (students) by invoking their update method. This pattern allows for a loosely coupled design, where the platform can communicate with students without having explicit knowledge of their individual details.
-<br>The Main class orchestrates the entire process, interacting with the user, handling authentication, and managing the overall flow of the Online Course Platform. This use of the Observer pattern enhances the extensibility of the platform, as new functionalities can be added without directly modifying existing classes.
-![image](https://github.com/Tileukhan/OnlineCoursePlatformProject/assets/116358731/5ceadabe-5a58-4eb5-a3bb-9ffaa333e3c7)
+## SE-2210 Group Project
+
+
+**Team Members:**
+- Erzen Arman
+- Tileukhan Seifulla
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Design Patterns](#design-patterns)
+  - [Singleton Pattern](#singleton-pattern)
+  - [Strategy Pattern](#strategy-pattern)
+  - [Adapter Pattern](#adapter-pattern)
+  - [Decorator Pattern](#decorator-pattern)
+  - [Factory Pattern](#factory-pattern)
+  - [Observer Pattern](#observer-pattern)
+  
+## Project Description
+
+The Online Course Platform is a Java-based application designed to efficiently provide a variety of courses for students. It includes features such as course purchasing (e.g., Calculus, Web Development, Python), a convenient payment system, and the flexibility to choose the course format. The platform caters to both teachers and students, allowing teachers to add students, send welcome messages, and providing the ability to download course descriptions in both txt and html formats. Throughout the development, the team prioritized user convenience for students, parents, and teachers.
+
+## Design Patterns
+
+### Singleton Pattern
+
+In our project, the Singleton pattern is applied to the `UserManager` class, ensuring a singular instance for centralized user management. This design choice establishes a global point for user-related operations, promoting efficiency by preventing unnecessary object instantiation.
+
+### Strategy Pattern
+
+The Strategy pattern is applied to handle payment methods. This design involves an interface, `PaymentStrategy`, defining a common method for payments, and a `PaymentContext` class managing the payment strategy dynamically. Concrete implementations encapsulate specific payment behaviors, allowing users to select and execute different payment strategies during the course enrollment process.
+
+### Adapter Pattern
+
+The Adapter pattern bridges the interface mismatch between `DownloadMaterial` and `HTMLSaver`. The `DownloadMaterialToHtmlAdapter` class acts as an intermediary, adapting the `HTMLSaver` interface to the `DownloadMaterial` interface, facilitating the integration of the HTMLDownloader into the broader structure of the online course platform application.
+
+### Decorator Pattern
+
+The Decorator pattern is utilized to extend the behavior of the `Course` interface without altering its structure. Decorators enhance the original `enroll` method by appending messages indicating the chosen course format, allowing users to dynamically choose different course formats during the enrollment process.
+
+### Factory Pattern
+
+The Factory pattern is employed to facilitate the dynamic creation of different courses within the Online Course Platform. Concrete factories, such as `CalculusCourseFactory`, `PythonCourseFactory`, and `WebDevelopmentCourseFactory`, create instances of the respective courses. This modular and extensible design allows for the addition of new courses and their corresponding factories.
+
+### Observer Pattern
+
+The Observer pattern is utilized to enable communication between the Online Course Platform and its enrolled students. This pattern allows for a loosely coupled design, where the platform can communicate with students without having explicit knowledge of their individual details.
+
+![Platform Image](https://github.com/Tileukhan/OnlineCoursePlatformProject/assets/116358731/5ceadabe-5a58-4eb5-a3bb-9ffaa333e3c7)
+
