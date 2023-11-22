@@ -17,6 +17,7 @@
   - [Decorator Pattern](#decorator-pattern)
   - [Factory Pattern](#factory-pattern)
   - [Observer Pattern](#observer-pattern)
+- [UML Diagram](#uml-diagram)
   
 ## Project Description
 
@@ -48,5 +49,6 @@ The Factory pattern is employed to facilitate the dynamic creation of different 
 
 The Observer pattern is utilized to enable communication between the Online Course Platform and its enrolled students. This pattern allows for a loosely coupled design, where the platform can communicate with students without having explicit knowledge of their individual details.
 
+## UML Diagram
 ![Platform Image](https://github.com/Tileukhan/OnlineCoursePlatformProject/assets/116358731/5ceadabe-5a58-4eb5-a3bb-9ffaa333e3c7)
 
